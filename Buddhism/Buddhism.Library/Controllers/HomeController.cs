@@ -33,7 +33,16 @@ namespace Buddhism.Library.Controllers
         [HttpPost]
         public ActionResult Create(User user)
         {
-            return Json(new { message="保存成功！",success=true});
+            if (user.UserId==0)
+            {
+                _userService.Add(user);
+            }
+            else
+            {
+                _userService.Update(user);
+            }
+            _unitOfwork.Commit();
+            return Json(true);
         }
         public ActionResult Delete()
         {

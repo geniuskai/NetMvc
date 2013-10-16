@@ -3,7 +3,7 @@
     ViewBag.Title = "主页";
 }
 <p><button class="add-editor-dialog" action="/Home/Create">增加用户</button></p>
-<table>
+<table class="table-list">
     <thead>
         <tr>
             <th>账号</th>
@@ -43,6 +43,7 @@
                             buttons: {
                                 "确定": function () {
                                     $(this).find("form").submit();
+                                    return false;
                                 },
                                 "取消": function () {
                                     $("#add-dialog").remove();
@@ -51,6 +52,28 @@
                         });
                     }
                 })
+            })
+            $("form[class=formsubmit]").live("submit", function () {
+                var form = $(this);
+                $.ajax({
+                    url: form.attr("action"),
+                    data: form.serialize(),
+                    type: "post",
+                    dataType: "json",
+                    success: function (data) { 
+                        if (data == true) {
+                            alert("保存成功！");
+                            form.parent("div").remove();
+                        }
+                        else {  //提示失败的原因  target:提示的位置， message:提示的消息    
+                            alert("保存失败！");
+                        }
+                    },
+                    error: function () {
+                       
+                    }
+                });
+                return false;
             })
         })
     </script>

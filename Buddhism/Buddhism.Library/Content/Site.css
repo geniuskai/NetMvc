@@ -754,3 +754,34 @@ tr.pager td {
             margin: 0;
         }
 }
+.table-list
+{
+    border:1px solid #a6dbed;
+    width:100%;
+}
+    .table-list thead
+    {
+        background:url("themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png");
+        padding:0;
+    }
+    .table-list th
+    {
+        padding: 0px 4px;
+        height: 30px;
+        line-height: 22px;
+        vertical-align: middle;
+        border: solid 1px #bbb;
+        font-weight: bold;
+        text-align: center;
+    }
+    .table-list tbody tr
+    {
+        background-color:rgb(238, 238, 255);
+    }
+    .table-list td
+    {
+        border-right: dotted 1px #bbb;
+        border-top: solid 1px #ddd;
+        padding: 2px 4px;
+        height: 22px;
+    }

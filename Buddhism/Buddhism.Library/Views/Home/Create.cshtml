@@ -3,6 +3,7 @@
     ViewBag.Title = "Create";
     Layout = null;
 }
-@using(Html.BeginForm()){
+@using (Html.BeginForm("Create", "Home", FormMethod.Post, new { @class = "formsubmit" }))
+{
     @Html.EditorForModel(Model)
 }
