@@ -1,0 +1,8 @@
+﻿@model Buddhism.Domain.Security.User
+@{
+    ViewBag.Title = "Create";
+    Layout = null;
+}
+@using(Html.BeginForm()){
+    @Html.EditorForModel(Model)
+}

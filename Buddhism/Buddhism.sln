@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buddhism.Common", "Buddhism.Common\Buddhism.Common.csproj", "{85007E93-9864-4E69-B33A-657A9C1B7077}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buddhism.Domain", "Buddhism.Domain\Buddhism.Domain.csproj", "{BB26635F-7A97-4BD7-8EFF-14B4F9C50AB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buddhism.Service", "Buddhism.Service\Buddhism.Service.csproj", "{08BC01EA-96AD-4A80-9F3E-7DBA0B021C46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buddhism.NHibernate", "Buddhism.NHibernate\Buddhism.NHibernate.csproj", "{6EE9D21A-9F39-4EDE-BFB9-1693B575FE48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buddhism.EntityFramework", "Buddhism.EntityFramework\Buddhism.EntityFramework.csproj", "{D1253050-1A5D-405A-92D8-386B26ABF5BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buddhism.Library", "Buddhism.Library\Buddhism.Library.csproj", "{858D511A-3992-4012-8016-3B69769C2455}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85007E93-9864-4E69-B33A-657A9C1B7077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85007E93-9864-4E69-B33A-657A9C1B7077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85007E93-9864-4E69-B33A-657A9C1B7077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85007E93-9864-4E69-B33A-657A9C1B7077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB26635F-7A97-4BD7-8EFF-14B4F9C50AB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB26635F-7A97-4BD7-8EFF-14B4F9C50AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB26635F-7A97-4BD7-8EFF-14B4F9C50AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB26635F-7A97-4BD7-8EFF-14B4F9C50AB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08BC01EA-96AD-4A80-9F3E-7DBA0B021C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08BC01EA-96AD-4A80-9F3E-7DBA0B021C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08BC01EA-96AD-4A80-9F3E-7DBA0B021C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08BC01EA-96AD-4A80-9F3E-7DBA0B021C46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE9D21A-9F39-4EDE-BFB9-1693B575FE48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE9D21A-9F39-4EDE-BFB9-1693B575FE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE9D21A-9F39-4EDE-BFB9-1693B575FE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE9D21A-9F39-4EDE-BFB9-1693B575FE48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1253050-1A5D-405A-92D8-386B26ABF5BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1253050-1A5D-405A-92D8-386B26ABF5BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1253050-1A5D-405A-92D8-386B26ABF5BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1253050-1A5D-405A-92D8-386B26ABF5BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{858D511A-3992-4012-8016-3B69769C2455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{858D511A-3992-4012-8016-3B69769C2455}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{858D511A-3992-4012-8016-3B69769C2455}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{858D511A-3992-4012-8016-3B69769C2455}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

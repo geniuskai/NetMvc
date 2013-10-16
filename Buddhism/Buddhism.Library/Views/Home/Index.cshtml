@@ -1,0 +1,57 @@
+﻿@model IQueryable<Buddhism.Domain.Security.User>
+@{
+    ViewBag.Title = "主页";
+}
+<p><button class="add-editor-dialog" action="/Home/Create">增加用户</button></p>
+<table>
+    <thead>
+        <tr>
+            <th>账号</th>
+            <th>姓名</th>
+            <th>密码</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.UserAccount</td>
+                <td>@item.UserName</td>
+                <td>@item.UserPassword</td>
+                <td>
+                    <a href="#" class="add-editor-dialog" action="/Home/Create/@item.UserId">修改</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            $(".add-editor-dialog").live("click", function () {
+                var url = $(this).attr("action");
+                var title = $(this).text();
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    datatype: 'html',
+                    success: function (msg) {
+                        $("<div id='add-dialog' title='"+title+"'>").html(msg).dialog({
+                            autoOpen: true,
+                            width: 350,
+                            buttons: {
+                                "确定": function () {
+                                    $(this).find("form").submit();
+                                },
+                                "取消": function () {
+                                    $("#add-dialog").remove();
+                                }
+                            }
+                        });
+                    }
+                })
+            })
+        })
+    </script>
+    }
