@@ -146,6 +146,37 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\bg_login_1.png" />
+    <Content Include="Content\images\bg_login_2.png" />
+    <Content Include="Content\images\calendar.png" />
+    <Content Include="Content\images\Delete.png" />
+    <Content Include="Content\images\Details.png" />
+    <Content Include="Content\images\first.gif" />
+    <Content Include="Content\images\first_disabled.gif" />
+    <Content Include="Content\images\header.png" />
+    <Content Include="Content\images\help.jpg" />
+    <Content Include="Content\images\help.png" />
+    <Content Include="Content\images\icons32.png" />
+    <Content Include="Content\images\last.gif" />
+    <Content Include="Content\images\last_disabled.gif" />
+    <Content Include="Content\images\leftbranch.png" />
+    <Content Include="Content\images\line.gif" />
+    <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\menu.png" />
+    <Content Include="Content\images\Modify.png" />
+    <Content Include="Content\images\next.gif" />
+    <Content Include="Content\images\next_disabled.gif" />
+    <Content Include="Content\images\pic2.png" />
+    <Content Include="Content\images\prev.gif" />
+    <Content Include="Content\images\prev_disabled.gif" />
+    <Content Include="Content\images\Refresh.png" />
+    <Content Include="Content\images\rmb.png" />
+    <Content Include="Content\images\seacher-ico.png" />
+    <Content Include="Content\images\sidebar.png" />
+    <Content Include="Content\images\System_Int32.png" />
+    <Content Include="Content\images\System_UInt32.png" />
+    <Content Include="Content\images\text.png" />
+    <Content Include="Content\images\thead_bg.PNG" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -203,6 +234,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\common.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -255,6 +287,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Buddhism.Common\Buddhism.Common.csproj">
+      <Project>{85007e93-9864-4e69-b33a-657a9c1b7077}</Project>
+      <Name>Buddhism.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Buddhism.Domain\Buddhism.Domain.csproj">
       <Project>{bb26635f-7a97-4bd7-8eff-14b4f9c50ab1}</Project>
       <Name>Buddhism.Domain</Name>
@@ -262,6 +298,10 @@
     <ProjectReference Include="..\Buddhism.EntityFramework\Buddhism.EntityFramework.csproj">
       <Project>{d1253050-1a5d-405a-92d8-386b26abf5bd}</Project>
       <Name>Buddhism.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Buddhism.Mvc\Buddhism.Mvc.csproj">
+      <Project>{c118f866-e0e7-4cac-afc9-a806671ca7a0}</Project>
+      <Name>Buddhism.Mvc</Name>
     </ProjectReference>
     <ProjectReference Include="..\Buddhism.Service\Buddhism.Service.csproj">
       <Project>{08bc01ea-96ad-4a80-9f3e-7dba0b021c46}</Project>

@@ -13,6 +13,7 @@ using Buddhism.EntityFramework;
 using Buddhism.EntityFramework.Infrastructure;
 using Buddhism.EntityFramework.Initializer;
 using Buddhism.Library.Controllers;
+using Buddhism.Mvc.Environment;
 using Buddhism.Service.Services.Security;
 
 namespace Buddhism.Library
@@ -22,6 +23,12 @@ namespace Buddhism.Library
 
     public class MvcApplication : System.Web.HttpApplication
     {
+        private IHost _host;
+        public MvcApplication()
+        {
+            this._host = new DefaultHost(this);
+        }
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();

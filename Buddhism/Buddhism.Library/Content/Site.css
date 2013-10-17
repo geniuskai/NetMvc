@@ -761,13 +761,13 @@ tr.pager td {
 }
     .table-list thead
     {
-        background:url("themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png");
+        background:url(/Content/images/thead_bg.png);
         padding:0;
     }
     .table-list th
     {
         padding: 0px 4px;
-        height: 30px;
+        height: 27px;
         line-height: 22px;
         vertical-align: middle;
         border: solid 1px #bbb;
@@ -785,3 +785,28 @@ tr.pager td {
         padding: 2px 4px;
         height: 22px;
     }
+
+ /*Pager  分页
+-------------------------------------------------------------*/
+.pager {height: 24px;line-height: 22px;	width: 100%;display: block;	background: url(/Content/images/thead_bg.png);border-bottom: solid 1px #bbb;margin-bottom: 5px;overflow:hidden;}
+.pager div {height: 100%;float: left;text-align: center;vertical-align: middle;}
+.pager .first, .pager .prev, .pager .next, .pager .last, .pager .first_disabled, .pager .prev_disabled, .pager .next_disabled, .pager .last_disabled {text-indent: -100px;overflow: hidden;width: 20px;}
+.pager .first, .pager .prev, .pager .next, .pager .last, .pager .refresh {cursor: pointer;}
+.pager .first {background: url(/Content/images/first.gif) no-repeat center;}
+.pager .first_disabled {background: url(/Content/images/first_disabled.gif) no-repeat center;}
+.pager .prev {background: url(/Content/images/prev.gif) no-repeat center;}
+.pager .prev_disabled {background: url(/Content/images/prev_disabled.gif) no-repeat center;}
+.pager .next {background: url(/Content/images/next.gif) no-repeat center;}
+.pager .next_disabled {background: url(/Content/images/next_disabled.gif) no-repeat center;}
+.pager .last {background: url(/Content/images/last.gif) no-repeat center;}
+.pager .last_disabled {background: url(/Content/images/last_disabled.gif) no-repeat center;}
+.pager .refresh{padding-left: 18px;background: url(/Content/images/refresh.png) no-repeat left center;margin-left: 5px;margin-right: 5px;}
+.pager .sep {height: 100%;width: 2px;background: url(/Content/images/line.gif) no-repeat center;}
+.pager .sizeInfo {padding-left: 5px;padding-right: 5px;	border-left: solid 1px #bbb;}
+.pager .size {width: 80px; /*调节此数值以修改 与导航的间距*/text-align: left;padding-top: -1px;}
+.pager .size select {width: 50px;}
+.pager .current {width: 80px;vertical-align: middle;padding-top: -1px;}
+.pager .current input[type='text'] {width: 20px;height: 16px;line-height: 16px;	padding: 0px;text-align: center;vertical-align: middle;}
+.pager .current #QueryInfo_Page {width: 20px;height: 16px;line-height: 16px;padding: 0px; border:1px solid #E2E2E2; text-align: center;vertical-align: middle;}
+.pager .info {text-align: right;padding-right: 30px;float: right;width: 150px;border-right: solid 1px #bbb;}
+.pager .loading {display: none;padding-left: 20px;margin-left: 10px;background: url(/Content/images/loading.gif) no-repeat center left;}

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6EE9D21A-9F39-4EDE-BFB9-1693B575FE48}</ProjectGuid>
+    <ProjectGuid>{C118F866-E0E7-4CAC-AFC9-A806671CA7A0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Buddhism.NHibernate</RootNamespace>
-    <AssemblyName>Buddhism.NHibernate</AssemblyName>
+    <RootNamespace>Buddhism.Mvc</RootNamespace>
+    <AssemblyName>Buddhism.Mvc</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,8 +30,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\Buddhism.Library\bin\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniProfiler">
+      <HintPath>..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniProfiler.EntityFramework">
+      <HintPath>..\packages\MiniProfiler.EF.2.1.0\lib\net40\MiniProfiler.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,7 +50,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Environment\DefaultHost.cs" />
+    <Compile Include="Environment\IHost.cs" />
+    <Compile Include="HtmlHelper\EmptyXXXXExtension.cs" />
+    <Compile Include="HtmlHelper\HtmlPagerHelper.cs" />
+    <Compile Include="Common\PagedData.cs" />
+    <Compile Include="Common\Pager.cs" />
+    <Compile Include="Common\PagerExtension.cs" />
+    <Compile Include="Common\QueryInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Buddhism.Common\Buddhism.Common.csproj">
+      <Project>{85007e93-9864-4e69-b33a-657a9c1b7077}</Project>
+      <Name>Buddhism.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Buddhism.EntityFramework\Buddhism.EntityFramework.csproj">
+      <Project>{d1253050-1a5d-405a-92d8-386b26abf5bd}</Project>
+      <Name>Buddhism.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Buddhism.Service\Buddhism.Service.csproj">
+      <Project>{08bc01ea-96ad-4a80-9f3e-7dba0b021c46}</Project>
+      <Name>Buddhism.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

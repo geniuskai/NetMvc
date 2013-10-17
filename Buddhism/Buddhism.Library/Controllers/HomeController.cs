@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Buddhism.Domain.Security;
 using Buddhism.EntityFramework;
 using Buddhism.EntityFramework.Infrastructure;
+using Buddhism.Mvc.Common;
 using Buddhism.Service.IServices.Security;
 using Buddhism.Service.Services.Security;
 
@@ -20,9 +21,10 @@ namespace Buddhism.Library.Controllers
             _userService = userService;
             _unitOfwork = unitOfwork;
         }
-        public ActionResult Index()
+        public ActionResult Index(QueryInfo queryInfo)
         {
-            var query = _userService.QueryAll();
+            queryInfo.OrderBy = queryInfo.OrderBy.IsNullOrEmpty()? "UserId":queryInfo.OrderBy;
+            var query = _userService.QueryAll().Page<User>(queryInfo);
             return View(query);
         }
         public ActionResult Create(int id=0)

@@ -1,9 +1,19 @@
-﻿@model IQueryable<Buddhism.Domain.Security.User>
+﻿@model Buddhism.Mvc.Common.PagedData<Buddhism.Domain.Security.User>
 @{
     ViewBag.Title = "主页";
 }
 <p><button class="add-editor-dialog" action="/Home/Create">增加用户</button></p>
-<table class="table-list">
+@using (Ajax.BeginForm("Index", new AjaxOptions { UpdateTargetId="data-show"}))
+{
+<div id="data-show">
+    <div id="query">
+        @Html.DropDownList("queryInfo.OrderBy",new []{
+        new SelectListItem{Text="编号",Value="UserId"},
+        new SelectListItem{Text="姓名",Value="UserName"}
+   })
+        <input type="submit" value="查询" />
+    </div>
+    <table class="table-list">
     <thead>
         <tr>
             <th>账号</th>
@@ -13,7 +23,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var item in Model)
+        @foreach (var item in Model)
         {
             <tr>
                 <td>@item.UserAccount</td>
@@ -26,6 +36,9 @@
         }
     </tbody>
 </table>
+    @Html.Pager(Model.Pager)
+</div>
+}
 @section scripts{
     <script type="text/javascript">
         $(function () {

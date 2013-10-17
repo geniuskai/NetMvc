@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("Buddhism.NHibernate")]
+[assembly: AssemblyTitle("Buddhism.Mvc")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("China")]
-[assembly: AssemblyProduct("Buddhism.NHibernate")]
+[assembly: AssemblyProduct("Buddhism.Mvc")]
 [assembly: AssemblyCopyright("Copyright © China 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("5d5d08bb-b6e9-4842-8499-6080ab2f3fe1")]
+[assembly: Guid("e88bc286-1e68-4be5-9b84-813aa5823b4d")]
 
 // 程序集的版本信息由下面四个值组成:
 //
